@@ -1,9 +1,9 @@
 pipeline 
 {
+    agent any 
 
-    agent any {
-
-        stages {
+        stages
+        {
             
             stage('Build')
             {
@@ -21,6 +21,7 @@ pipeline
                       echo "Test completed successfully"
                     }
              }
+
             stage('Package') 
             {
                 steps
@@ -28,6 +29,7 @@ pipeline
                       echo "Package completed successfully"
                     }
             }
+
             stage('Deploy') 
             {
                 steps
@@ -36,5 +38,4 @@ pipeline
                      }
             }
         }
-    }
 }
